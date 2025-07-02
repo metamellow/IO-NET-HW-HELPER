@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Math Helper - AI Homework Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-container">
+        <!-- Loading Screen -->
+        <section id="loading-screen" class="loading-screen">
+            <div class="monster-container">
+                <div class="monster-emoji">👾</div>
+                <div class="loading-text">Loading Monster Math Helper...</div>
+            </div>
+        </section>
+
+        <!-- Main Game Interface -->
+        <section id="game-interface" class="game-interface hidden">
+            <!-- Monster Display Area -->
+            <article class="monster-section">
+                <div class="monster-container">
+                    <div class="monster-emoji" id="monster-emoji">👾</div>
+                    <div class="monster-mouth-overlay" id="monster-mouth"></div>
+                    <div class="particle-container" id="particle-container"></div>
+                </div>
+                
+                <!-- Speech Bubble -->
+                <div class="speech-bubble" id="speech-bubble">
+                    <div class="speech-content" id="speech-content">
+                        Welcome to Monster Math Helper! I'm here to help you with your math homework! 🎉
+                    </div>
+                </div>
+            </article>
+
+            <!-- Problem Display Area -->
+            <article class="problem-section">
+                <div class="problem-container" id="problem-container">
+                    <h2 class="problem-text" id="problem-text">Ready to start?</h2>
+                </div>
+            </article>
+
+            <!-- Answer Input Area -->
+            <article class="answer-section">
+                <div class="input-container">
+                    <label for="answer-input" class="input-label">Your Answer:</label>
+                    <input 
+                        type="number" 
+                        id="answer-input" 
+                        class="answer-input" 
+                        placeholder="Enter your answer here..."
+                        aria-label="Enter your math answer"
+                        min="0"
+                        step="1"
+                    >
+                    <button id="submit-btn" class="submit-btn" aria-label="Submit answer">
+                        Submit Answer
+                    </button>
+                </div>
+            </article>
+
+            <!-- Score and Progress -->
+            <article class="score-section">
+                <div class="score-container">
+                    <div class="score-display">
+                        <span class="score-label">Score:</span>
+                        <span class="score-value" id="score-value">0</span>
+                        <span class="score-stars" id="score-stars">⭐</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Error/Setup Screen -->
+        <section id="error-screen" class="error-screen hidden">
+            <div class="error-container">
+                <div class="error-monster">👾</div>
+                <h2 class="error-title">Oops! Something went wrong</h2>
+                <p class="error-message" id="error-message">Please check your setup and try again.</p>
+                <button id="retry-btn" class="retry-btn">Try Again</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
